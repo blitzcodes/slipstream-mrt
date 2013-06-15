@@ -8,8 +8,8 @@ A light weight interface for Meteor development; a handy and organized way to ri
 * To provide a pseudo-MV(C/P/VM) like framework, built right on top of the Meteor native library itself
 * To help put a structure surrounding the Mongodb, and ensure you're only utilizing columns you have clearly defined vs. just winging it
 * To make Meteor much more accessible and easier to use from the get go, without having to remember or access Meteors innards all the time
+* To turn the main support classes into a Meteorite package to easily be installed and accessible to any project on a whim
 * (Future) To offer a script generator of some kind to automatically create the needs files for new objects from Slipstream
-* (Future) To turn the main support classes into a Meteorite package to easily be installed and accessible to any project on a whim
 
 # Interface Objects (At present)
 * `Slipstream.Drift` - The main holder object, that is used to access all functions, a quasi-MVC all in one object, to help contain and offer quick access to it's components
