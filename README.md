@@ -1,5 +1,5 @@
-# Slipstream - mrt v0.0.4
-A light weight interface for Meteor development; a handy and organized way to ride the slipstream of the great and evolving Meteor framework. My mission with this project is to address a few key concerns with developing a solid production ready system for Meteor.
+# Slipstream - mrt v0.0.7
+A light weight interface for Meteor (http://meteor.com/) development; a handy and organized way to ride the slipstream of the great and evolving Meteor framework. My mission with this project is to address a few key concerns with developing a solid production ready system for Meteor.
 
 `NOTE:` This project employs the use of [Meteorite](https://github.com/oortcloud/meteorite), a vital tool for any prospective Meteor developer.
 
