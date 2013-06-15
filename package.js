@@ -3,7 +3,15 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-	api.use(["underscore", "ejson"], ["client", "server"]);
+	api.use(
+		[
+			"underscore",
+			"ejson"
+		],
+		[
+			"client",
+			"server"
+		]);
 	api.use('router', 'client');
 	api.add_files(
 		[
@@ -24,7 +32,34 @@ Package.on_use(function (api) {
 	);
 });
 
+/**
+ * WIP, currently broken till I learn more on the subject
+ */
+
 Package.on_test(function (api) {
-	api.use(["Slipstream.Drift", "tinytest", "test-helpers"]);
-	api.add_files("lib/Slipstream.Drift.js", ["client", "server"]);
+	api.use(
+		[
+			"underscore",
+			"ejson"
+		],
+		[
+			"client",
+			"server"
+		]);
+	api.use('router', 'client');
+	api.use(
+		[
+			'slipstream',
+			'tinytest',
+			'test-helpers'
+		],
+		[
+			'client',
+			'server'
+		]);
+	api.add_files('test/slipstream-test.js',
+		[
+			'client',
+			'server'
+		]);
 });

@@ -6,6 +6,6 @@
 	"version"     : "0.0.7",
 	"git"         : "https://github.com/blitzcodes/Slipstream-mrt.git",
 	"packages"    : {
-		"router" : "*"
+		"router" : {}
 	}
 }
