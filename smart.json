@@ -1,10 +1,10 @@
 {
 	"name"        : "slipstream",
-	"description" : "Slipstream - A light weight interface for Meteor development, supporting Meteorite. https://github.com/blitzcodes/Slipstream-mrt",
-	"homepage"    : "https://github.com/blitzcodes/Slipstream-mrt",
-	"author"      : "Sean 'Blitz' Homer",
+	"description" : "Slipstream - A light weight interface for Meteor development, supporting Meteorite.",
+	"homepage"    : "https://github.com/blitzcodes/slipstream-mrt",
+	"author"      : "Sean Blitz Homer (https://github.com/blitzcodes)",
 	"version"     : "0.0.4",
-	"git"         : "https://github.com/blitzcodes/Slipstream-mrt.git",
+	"git"         : "https://github.com/blitzcodes/slipstream-mrt.git",
 	"packages"    : {
 		"router" : {}
 	}
