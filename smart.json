@@ -6,6 +6,7 @@
 	"version"     : "0.0.7",
 	"git"         : "https://github.com/blitzcodes/slipstream-mrt.git",
 	"packages"    : {
-		"router" : {}
+		"router"            : {},
+		"underscore-string" : {}
 	}
 }
