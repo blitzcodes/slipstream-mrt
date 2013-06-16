@@ -20,7 +20,7 @@ A light weight interface for Meteor (http://meteor.com/) development; a handy an
 * `Slipstream.Template` - Managing all of the template related general activity, such as the default templates to use per object, and form submission
 
 # Why Would An Interface Be Needed?
-I'm certainly not the first person who has ran into the constant confusion form lack of structure present in the framework as it stands. The features are brilliant to know end, have the up most esteem for the creators and of all their continued hard tireless work on it.  When it comes to its ease and accessibility when looking to design enterprise level applications however, it can be very very tricky.
+I'm certainly not the first person who has ran into the constant confusion from lack of structure present in the framework as it stands. The features are brilliant to know end, and I have the up most esteem for the creators and of all their continued hard tireless work on it.  When it comes to its ease and accessibility when looking to design enterprise level applications however, it can be very very tricky.
 
 Being able to load files from anywhere in a very particular order makes it tough at first to knowing if you're loading things properly, or being lazy and just throwing things all over the place. The question as well of what's server side/client side, when to use what where, sometimes can make it hard to know which aspects are needed for each respectively.
 
