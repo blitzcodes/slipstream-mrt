@@ -1,11 +1,12 @@
-# Slipstream - mrt v0.0.7
-A light weight interface for [Meteor](http://meteor.com/) development; a handy and organized way to ride the slipstream of the great and evolving Meteor framework. My mission with this project is to address a few key concerns with developing a solid production ready system for Meteor.
+# Slipstream
+
+Slipstream is a [Meteorite](https://github.com/oortcloud/meteorite) package, offering a light weight class interface for [Meteor](http://meteor.com/) development; a handy and organized way to ride the slipstream of the great and evolving Meteor framework. My mission with this project is to address a few key concerns with developing a solid production ready system for Meteor.
 
 * [Mrt Package](https://github.com/blitzcodes/slipstream-mrt)
 * [Sample Meteor & Meteorite Project](https://github.com/blitzcodes/slipstream-prj)
 * Npm Package for generating Slipstream objects, TBD
 
-`NOTE:` This project employs the use of [Meteorite](https://github.com/oortcloud/meteorite), a vital tool for any prospective Meteor developer.
+`NOTE:` This project employs the use of Meteorite, a vital tool for any prospective Meteor developer.
 
 ## This projects objectives are:
 
@@ -32,5 +33,5 @@ Coupled with inconsistency of examples out there on how best to leverage and tak
 
 When you can build your project in such a way, that not only when you return to working on it after a few weeks or months, or have another developer begin to collaborate with you, clean and definite code sitting there waiting for you is a godsend! :D
 
-# Notes
-This is the dedicated mrt package of the Slipstream interface I'm building out over time.
+# Versions
+* 0.0.7 - First public version shared.
