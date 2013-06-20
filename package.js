@@ -18,16 +18,35 @@ Package.on_use(function (api) {
 			'lib/_inc/prototype/string.js',
 			'lib/_inc/helpers.js',
 			'lib/_inc/Slipstream.js',
-			'lib/Slipstream.Column.js',
-			'lib/Slipstream.List.js',
-			'lib/Slipstream.Method.js',
-			'lib/Slipstream.Router.js',
-			'lib/Slipstream.Template.js',
-			'lib/Slipstream.Drift.js',
+			'lib/collection/Slipstream.Column.js',
+			'lib/collection/Slipstream.List.js',
+			'lib/collection/Slipstream.Method.js',
+//			'lib/client/Slipstream.Router.js',
+//			'lib/client/Slipstream.Template.js',
+//			'lib/client/Slipstream.Render.js',
+			'lib/client/Slipstream.Drift.js',
 		],
 		[
 			'client',
 			'server'
+		]
+	);
+	api.add_files(
+		[
+//			'lib/_inc/prototype/string.js',
+//			'lib/_inc/helpers.js',
+//			'lib/_inc/Slipstream.js',
+//			'lib/collection/Slipstream.Column.js',
+//			'lib/collection/Slipstream.List.js',
+//			'lib/collection/Slipstream.Method.js',
+			'lib/client/Slipstream.Router.js',
+			'lib/client/Slipstream.Template.js',
+			'lib/client/Slipstream.Render.js',
+//			'lib/client/Slipstream.Drift.js',
+		],
+		[
+			'client'
+//			'server'
 		]
 	);
 });

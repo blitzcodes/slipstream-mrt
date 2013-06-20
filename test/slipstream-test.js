@@ -7,22 +7,22 @@ Tinytest.add('MeteorFile - read', function (test) {
 });
 
 Tinytest.add('Slipstream.Drift - create object', function (test) {
-	var Project = new Slipstream.Drift('project', 'slug', {
-		title  : new Slipstream.Column({
+	var Project = Slipstream.Drift('project', 'slug', {
+		title  : Slipstream.Column({
 			name        : 'title',
 			label       : 'Project Title',
 			type        : InputTypes.text,
 			placeholder : 'Title',
 			default     : ''
 		}),
-		desc   : new Slipstream.Column({
+		desc   : Slipstream.Column({
 			name        : 'desc',
 			label       : 'Project Description',
 			type        : InputTypes.textarea,
 			placeholder : 'Description',
 			default     : ''
 		}),
-		author : new Slipstream.Column({
+		author : Slipstream.Column({
 			name        : 'author',
 			label       : 'Author',
 			type        : InputTypes.hidden,
