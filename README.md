@@ -18,7 +18,7 @@ Slipstream is a [Meteorite](https://github.com/oortcloud/meteorite) package, off
 
 # Interface Objects (At present)
 * `Slipstream.Drift` - The main holder object, that is used to access all functions, a quasi-MVC all in one object, to help contain and offer quick access to it's components
-* `Slipstream.List` - Inheriting and extending the Meteor collection object, as well as many handle attributes and methods to leverage
+* `Slipstream.Collection` - Inheriting and extending the Meteor collection object, as well as many handle attributes and methods to leverage
 * `Slipstream.Column` - A field object class used to help control the aspects of each column, controlled directly by the List
 * `Slipstream.Method` - Wrapper to handle Meteor method request to help control default calls back to the server for things such as form submission of the Model like object
 * `Slipstream.Router` - Leveraging the Router package installable through Meteorite, this handy class preconfigures all of the defaults route you would expect for the given object's name, as well as specificed by you the reference field that would appear in the url, such as /project/:_id/Update, controlled easily through code. No more setting up the basics ever again
