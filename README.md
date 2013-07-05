@@ -25,13 +25,15 @@ Slipstream is a [Meteorite](https://github.com/oortcloud/meteorite) package, off
 * `Slipstream.Template` - Managing all of the template related general activity, such as the default templates to use per object, and form submission
 
 # Why Would An Interface Be Needed?
-I'm certainly not the first person who has ran into the constant confusion from lack of structure present in the framework as it stands. The features are brilliant to know end, and I have the up most esteem for the creators and of all their continued hard tireless work on it.  When it comes to its ease and accessibility when looking to design enterprise level applications however, it can be very very tricky.
+I'm certainly not the first person who has ran into the constant confusion from lack of structure present in the framework as it stands. The features are brilliant to know end, and I have the up most esteem for the creators and of all their continued hard tireless work on it.  When it comes to its ease and accessibility while designing a DRY or enterprise level applications however, it can be very very tricky to utilize.
 
-Being able to load files from anywhere in a very particular order makes it tough at first to knowing if you're loading things properly, or being lazy and just throwing things all over the place. The question as well of what's server side/client side, when to use what where, sometimes can make it hard to know which aspects are needed for each respectively.
+Being able to load files from anywhere in a very particular order makes it tough at first to knowing if you're loading things properly, or being lazy and just throwing things all over the place can quickly turn your project into a spaghetti nightmare! The questions as well sa to what code should be what's server side/client side sometimes can make it hard to know which aspects are needed for each respectively.
 
 Coupled with inconsistency of examples out there on how best to leverage and take advantage of the features Meteor has to offer, it's far to easy to fall down the rabbits hole.  Try then to consider working in a team or production environment in that situation, and you can start to see how it's quite like walking through a mine field, blind folded, and backwards... ehh you get the hint!
 
-When you can build your project in such a way, that not only when you return to working on it after a few weeks or months, or have another developer begin to collaborate with you, clean and definite code sitting there waiting for you is a godsend! :D
+When you can build your project in such a way, that not only when you return to working on it after a few weeks or months, or have another developer begin to collaborate with you, clean and definitive is code sitting there waiting for you is a godsend! :D
+
+In addition to this, the amount of heavy lifting a interface can afford from the get go, allowing the capabilities to override essential components when further customize as needed, it brings the right balance of efficiency and flexibility while resting on a solid dependable foundation.
 
 # Versions
 ### 0.0.8

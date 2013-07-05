@@ -8,30 +8,38 @@ Tinytest.add('MeteorFile - read', function (test) {
 
 Tinytest.add('Slipstream.Drift - create object', function (test) {
 	var Project = Slipstream.Drift({
-		name           : 'project',
-		referenceField : 'slug',
-		columns        : {
-			title  : Slipstream.Column({
+		name            : 'project',
+		referenceColumn : 'slug',
+		columns         : {
+			title : Slipstream.Column({
 				name        : 'title',
 				label       : 'Project Title',
-				type        : InputTypes.text,
-				placeholder : 'Title',
-				default     : ''
+				type        : 'text',
+				placeholder : 'Title'
 			}),
-			desc   : Slipstream.Column({
+			desc  : Slipstream.Column({
 				name        : 'desc',
 				label       : 'Project Description',
-				type        : InputTypes.textarea,
-				placeholder : 'Description',
-				default     : ''
-			}),
-			author : Slipstream.Column({
-				name        : 'author',
-				label       : 'Author',
-				type        : InputTypes.hidden,
-				placeholder : 'Author',
-				default     : ''
+				type        : 'textarea',
+				placeholder : 'Description'
 			})
+		},
+		templates       : {
+			custom : {
+				helpers   : {
+					items : function () {
+						return Project.find({}, {sort : {dateCreated : -1}});
+					}
+				},
+				events    : {
+				},
+				created   : function () {
+				},
+				rendered  : function () {
+				},
+				destroyed : function () {
+				}
+			}
 		}});
 	var o = {};
 	test.equal(Project, o, 'Likely to be different');
