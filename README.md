@@ -34,4 +34,8 @@ Coupled with inconsistency of examples out there on how best to leverage and tak
 When you can build your project in such a way, that not only when you return to working on it after a few weeks or months, or have another developer begin to collaborate with you, clean and definite code sitting there waiting for you is a godsend! :D
 
 # Versions
-* 0.0.7 - First public version shared.
+### 0.0.8
+* Much testing and practical consideration into how best to define and interact with the core slipstream objects.
+* Pulling out as much code from the meteor project to be DRY and reuseable/overrideable within the slipstream objects, giving a solid set of default functionality while still allowing the innards to be easily overrode.
+### 0.0.7
+* First public version shared.
