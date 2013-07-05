@@ -37,5 +37,6 @@ When you can build your project in such a way, that not only when you return to 
 ### 0.0.8
 * Much testing and practical consideration into how best to define and interact with the core slipstream objects.
 * Pulling out as much code from the meteor project to be DRY and reuseable/overrideable within the slipstream objects, giving a solid set of default functionality while still allowing the innards to be easily overrode.
+
 ### 0.0.7
 * First public version shared.
