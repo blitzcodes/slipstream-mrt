@@ -7,8 +7,8 @@ Tinytest.add('MeteorFile - read', function (test) {
 });
 
 Tinytest.add('Slipstream.Drift - create object', function (test) {
-	var Project = Slipstream.Drift({
-		name            : 'project',
+	var Test = Slipstream.Drift({
+		name            : 'test',
 		referenceColumn : 'slug',
 		columns         : {
 			title : Slipstream.Column({
@@ -23,25 +23,8 @@ Tinytest.add('Slipstream.Drift - create object', function (test) {
 				type        : 'textarea',
 				placeholder : 'Description'
 			})
-		},
-		templates       : {
-			custom : {
-				helpers   : {
-					items : function () {
-						return Project.find({}, {sort : {dateCreated : -1}});
-					}
-				},
-				events    : {
-				},
-				created   : function () {
-				},
-				rendered  : function () {
-				},
-				destroyed : function () {
-				}
-			}
 		}});
 	var o = {};
-	test.equal(Project, o, 'Likely to be different');
+	test.equal(Test, o, 'Likely to be different');
 });
 
