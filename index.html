@@ -34,12 +34,11 @@
 
 <ul>
 <li><a href="https://github.com/blitzcodes/slipstream-mrt">Mrt Package</a></li>
-<li><a href="https://github.com/blitzcodes/slipstream-prj">Sample Meteor &amp; Meteorite Project</a></li>
-<li>Npm Package for generating Slipstream objects, TBD</li>
+<li>Sample Meteor &amp; Meteorite Project - coming soon!</li>
 </ul><p><code>NOTE:</code> This project employs the use of Meteorite, a vital tool for any prospective Meteor developer.</p>
 
 <h2>
-<a name="projects-objectives" class="anchor" href="#projects-objectives"><span class="octicon octicon-link"></span></a>Projects Objectives:</h2>
+<a name="this-projects-objectives-are" class="anchor" href="#this-projects-objectives-are"><span class="octicon octicon-link"></span></a>This projects objectives are:</h2>
 
 <ul>
 <li>To provide a pseudo-MV(C/P/VM) like framework, built right on top of the Meteor native library itself</li>
@@ -47,8 +46,91 @@
 <li>To make Meteor much more accessible and easier to use from the get go, without having to remember or access Meteors innards all the time</li>
 <li>To turn the main support classes into a Meteorite package to easily be installed and accessible to any project on a whim</li>
 <li>(Future) To offer a script generator of some kind to automatically create the needs files for new objects from Slipstream</li>
+</ul><h1>
+<a name="versions" class="anchor" href="#versions"><span class="octicon octicon-link"></span></a>Versions</h1>
+
+<h2>
+<a name="v009" class="anchor" href="#v009"><span class="octicon octicon-link"></span></a>v0.0.9</h2>
+
+<h4>
+<a name="framework" class="anchor" href="#framework"><span class="octicon octicon-link"></span></a>Framework</h4>
+
+<ul>
+<li>Much testing and refactoring of the slipstream objects has been applied, cleaning up parts, commenting a little, and flushing out all of the recent changes and essential component functionality/processing</li>
+<li>Restoring proper route initialization, which went slightly astray in the last version</li>
+</ul><h3>
+<a name="client-side-logging" class="anchor" href="#client-side-logging"><span class="octicon octicon-link"></span></a>Client Side Logging</h3>
+
+<ul>
+<li>Revised the logging controls, to better leverage displaying messages back to the user via bootstraps alerts
+
+<ul>
+<li>
+<code>Slipstream.log.error(message)</code> - Red</li>
+<li>
+<code>Slipstream.log.success(message)</code> - Green</li>
+<li>
+<code>Slipstream.log.warning(message)</code> - Yellow</li>
+<li>
+<code>Slipstream.log.info(message)</code> - Blue</li>
+</ul>
+</li>
+</ul><h3>
+<a name="debugging" class="anchor" href="#debugging"><span class="octicon octicon-link"></span></a>Debugging</h3>
+
+<ul>
+<li>Added a convenient way to toggle which console/server debug message form the end slipstream object, now leveraging the <code>Meteor._debug</code> call, vs having random debug message for testing anywhere/anytime...</li>
+</ul><pre><code>// The debug options can be set for any slipsteam object you're working with:
+debug : {
+  /* 
+    This will display any initialization calls that should run only the first time an object is created. 
+    This may run in any of the supporting objects, and require their matching debug flags below to be true 
+    in order to display. The exception to this is the pub/sub init messages, which only requires this flag.
+  */
+  init       : true,
+
+  // Messages related to process collection requests, such attempts to insert/update, etc...
+  collection : true,
+  /* 
+    Messages related to running the Meteor.methods calls, related to processing the 
+    template data for validation before sending it along to the collection for processing there
+  */
+  method : true ,
+  // Messages related to elements being rendered on page, called largely as helper objects for tempaltes
+  render     : true, 
+  // Messages related to setting up accessing router functions, main fall under the init flags
+  router     : true, 
+  // Messages related to render session related data as it's accessed
+  session    : true, 
+  // Messages related to the loading of template actions, largely around he submit form action and results of it's steps
+  template   : true
+}
+</code></pre>
+
+<h3>
+<a name="now-supporting-pubsub" class="anchor" href="#now-supporting-pubsub"><span class="octicon octicon-link"></span></a>Now Supporting Pub/Sub</h3>
+
+<ul>
+<li>Added the proper pub/sub configuration to the <code>Slipstream.Collection</code>, now by default setting up a pub/sub from the object name, or allowing a object list of publish functions, and named array list of subscribes</li>
+<li>This allowed finally the removal of insecure/autopublish default packages for proper app development.</li>
+<li>The set up code for this got large and fugly, so I moved it into it's own object <code>Slipstream.CollectionSetup</code>
+</li>
+<li>
+<code>Slipstream.CollectionSetup</code> passes back different a different collection based on whether the client or server is running the code, since they have a different order in which they can run publish/subscribe</li>
+<li>In summery, it takes out the grunt work of using them now, either effortlessly by default now declaring nothing, or easily passing along custom calls as needed.</li>
 </ul><h2>
-<a name="interface-objects-at-present" class="anchor" href="#interface-objects-at-present"><span class="octicon octicon-link"></span></a>Interface Objects (At present)</h2>
+<a name="v008" class="anchor" href="#v008"><span class="octicon octicon-link"></span></a>v0.0.8</h2>
+
+<ul>
+<li>Much testing and practical consideration into how best to define and interact with the core slipstream objects.</li>
+<li>Pulling out as much code from the meteor project to be DRY and reuseable/overrideable within the slipstream objects, giving a solid set of default functionality while still allowing the innards to be easily overrode.</li>
+</ul><h2>
+<a name="v007" class="anchor" href="#v007"><span class="octicon octicon-link"></span></a>v0.0.7</h2>
+
+<ul>
+<li>First public version shared.</li>
+</ul><h1>
+<a name="interface-objects-as-of-007" class="anchor" href="#interface-objects-as-of-007"><span class="octicon octicon-link"></span></a>Interface Objects (as of 0.0.7)</h1>
 
 <ul>
 <li>
@@ -63,16 +145,18 @@
 <code>Slipstream.Router</code> - Leveraging the Router package installable through Meteorite, this handy class preconfigures all of the defaults route you would expect for the given object's name, as well as specificed by you the reference field that would appear in the url, such as /project/:_id/Update, controlled easily through code. No more setting up the basics ever again</li>
 <li>
 <code>Slipstream.Template</code> - Managing all of the template related general activity, such as the default templates to use per object, and form submission</li>
-</ul><h2>
-<a name="why-would-an-interface-be-needed" class="anchor" href="#why-would-an-interface-be-needed"><span class="octicon octicon-link"></span></a>Why Would An Interface Be Needed?</h2>
+</ul><h1>
+<a name="why-would-an-interface-be-needed" class="anchor" href="#why-would-an-interface-be-needed"><span class="octicon octicon-link"></span></a>Why Would An Interface Be Needed?</h1>
 
-<p>I'm certainly not the first person who has ran into the constant confusion from lack of structure present in the framework as it stands. The features are brilliant to know end, and I have the up most esteem for the creators and of all their continued hard tireless work on it.  When it comes to its ease and accessibility when looking to design enterprise level applications however, it can be very very tricky.</p>
+<p>I'm certainly not the first person who has ran into the constant confusion from lack of structure present in the framework as it stands. The features are brilliant to know end, and I have the up most esteem for the creators and of all their continued hard tireless work on it.  When it comes to its ease and accessibility while designing a DRY or enterprise level applications however, it can be very very tricky to utilize.</p>
 
-<p>Being able to load files from anywhere in a very particular order makes it tough at first to knowing if you're loading things properly, or being lazy and just throwing things all over the place. The question as well of what's server side/client side, when to use what where, sometimes can make it hard to know which aspects are needed for each respectively.</p>
+<p>Being able to load files from anywhere in a very particular order makes it tough at first to knowing if you're loading things properly, or being lazy and just throwing things all over the place can quickly turn your project into a spaghetti nightmare! The questions as well sa to what code should be what's server side/client side sometimes can make it hard to know which aspects are needed for each respectively.</p>
 
 <p>Coupled with inconsistency of examples out there on how best to leverage and take advantage of the features Meteor has to offer, it's far to easy to fall down the rabbits hole.  Try then to consider working in a team or production environment in that situation, and you can start to see how it's quite like walking through a mine field, blind folded, and backwards... ehh you get the hint!</p>
 
-<p>When you can build your project in such a way, that not only when you return to working on it after a few weeks or months, or have another developer begin to collaborate with you, clean and definite code sitting there waiting for you is a godsend! :D</p>
+<p>When you can build your project in such a way, that not only when you return to working on it after a few weeks or months, or have another developer begin to collaborate with you, clean and definitive is code sitting there waiting for you is a godsend! :D</p>
+
+<p>In addition to this, the amount of heavy lifting a interface can afford from the get go, allowing the capabilities to override essential components when further customize as needed, it brings the right balance of efficiency and flexibility while resting on a solid dependable foundation.</p>
         </section>
 
         <aside id="sidebar">
