@@ -18,6 +18,9 @@ Package.on_use(function (api) {
 			'lib/_inc/prototype/string.js',
 			'lib/_inc/helpers.js',
 			'lib/_inc/Slipstream.js',
+			'lib/_inc/Slipstream.error.js',
+			'lib/_inc/Slipstream.log.js',
+			'lib/collection/Slipstream.Session.js',
 		],
 		[
 			'client',
