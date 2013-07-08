@@ -3,8 +3,7 @@
 Slipstream is a [Meteorite](https://github.com/oortcloud/meteorite) package, offering a light weight class interface for [Meteor](http://meteor.com/) development; a handy and organized way to ride the slipstream of the great and evolving Meteor framework. My mission with this project is to address a few key concerns with developing a solid production ready system for Meteor.
 
 * [Mrt Package](https://github.com/blitzcodes/slipstream-mrt)
-* [Sample Meteor & Meteorite Project](https://github.com/blitzcodes/slipstream-prj)
-* Npm Package for generating Slipstream objects, TBD
+* Sample Meteor & Meteorite Project - coming soon!
 
 `NOTE:` This project employs the use of Meteorite, a vital tool for any prospective Meteor developer.
 
