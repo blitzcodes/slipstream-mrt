@@ -36,6 +36,38 @@ When you can build your project in such a way, that not only when you return to 
 In addition to this, the amount of heavy lifting a interface can afford from the get go, allowing the capabilities to override essential components when further customize as needed, it brings the right balance of efficiency and flexibility while resting on a solid dependable foundation.
 
 # Versions
+### 0.0.9
+* Much testing and refactoring of the slipstream objects has been applied, cleaning up parts, commenting a little, and flushing out all of the recent changes and essential component functionality/processing
+* Restoring proper route initialization, which went slightly astray in the last version
+#### Client Side Logging
+* Revised the logging controls, to better leverage displaying messages back to the user via bootstraps alerts
+** `Slipstream.log.error(message)` - Red
+** `Slipstream.log.success(message)` - Green
+** `Slipstream.log.warning(message)` - Yellow
+** `Slipstream.log.info(message)` - Blue
+#### Debugging
+* Added a convenient way to toggle which console/server debug message form the end slipstream object, now leveraging the `Meteor._debug` call, vs having random debug message for testing anywhere/anytime...
+ ```
+// The debug options can be set for any slipsteam object you're working with:
+debug : {
+	// This will display any initialization calls that should run only the first time an object is created. This may run in any of the supporting objects, and require their matching debug flags below to be true in order to display. The exception to this is the pub/sub init messages, which only requires this flag.
+	init       : true,
+	// The rest of the options will display key message when running functions inside the given object:
+	collection : true, // Messages related to process collection requests, such attempts to insert/update, etc...
+	template   : true, // Messages related to the loading of template actions, largely around he submit form action and results of it's steps
+	render     : true, // Messages related to elements being rendered on page, called largely as helper objects for tempaltes
+	router     : true, // Messages related to setting up accessing router functions, main fall under the init flags
+	session    : true, // Messages related to render session related data as it's accessed
+	method : true // Messages related to running the Meteor.methods calls, related to processing the template data for validation before sending it along to the collection for processing there
+}
+ ```
+#### Now Supporting Pub/Sub
+* Added the proper pub/sub configuration to the `Slipstream.Collection`, now by default setting up a pub/sub from the object name, or allowing a object list of publish functions, and named array list of subscribes
+* This allowed finally the removal of insecure/autopublish default packages for proper app development.
+* The set up code for this got large and fugly, so I moved it into it's own object `Slipstream.CollectionSetup`
+* `Slipstream.CollectionSetup` passes back different a different collection based on whether the client or server is running the code, since they have a different order in which they can run publish/subscribe
+* In summery, it takes out the grunt work of using them now, either effortlessly by default now declaring nothing, or easily passing along custom calls as needed.
+
 ### 0.0.8
 * Much testing and practical consideration into how best to define and interact with the core slipstream objects.
 * Pulling out as much code from the meteor project to be DRY and reuseable/overrideable within the slipstream objects, giving a solid set of default functionality while still allowing the innards to be easily overrode.

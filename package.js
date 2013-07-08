@@ -37,6 +37,7 @@ Package.on_use(function (api) {
 	api.add_files(
 		[
 			'lib/collection/Slipstream.Column.js',
+			'lib/collection/Slipstream.CollectionSetup.js',
 			'lib/collection/Slipstream.Collection.js',
 			'lib/collection/Slipstream.Method.js',
 			'lib/Slipstream.Drift.js',
