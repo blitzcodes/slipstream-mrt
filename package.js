@@ -15,8 +15,24 @@ Package.on_use(function (api) {
 	api.use('router', 'client');
 	api.add_files(
 		[
+			'lib/_inc/handlebars/handlebars.js',
+		],
+		[
+			'client',
+		]
+	);
+	api.add_files(
+		[
 			'lib/_inc/prototype/string.js',
 			'lib/_inc/helpers.js',
+		],
+		[
+			'client',
+			'server'
+		]
+	);
+	api.add_files(
+		[
 			'lib/_inc/Slipstream.js',
 			'lib/_inc/Slipstream.error.js',
 			'lib/_inc/Slipstream.log.js',
