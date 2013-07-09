@@ -47,7 +47,6 @@ Package.on_use(function (api) {
 		[
 			'lib/client/Slipstream.Router.js',
 			'lib/client/Slipstream.Template.js',
-			'lib/client/Slipstream.Render.js',
 		],
 		[
 			'client'
