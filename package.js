@@ -35,7 +35,6 @@ Package.on_use(function (api) {
 			'lib/_inc/Slipstream.js',
 			'lib/_inc/Slipstream.error.js',
 			'lib/_inc/Slipstream.log.js',
-			'lib/collection/Slipstream.Session.js',
 		],
 		[
 			'client',
@@ -44,6 +43,7 @@ Package.on_use(function (api) {
 	);
 	api.add_files(
 		[
+			'lib/client/Slipstream.Session.js',
 			'lib/client/Slipstream.Router.js',
 			'lib/client/Slipstream.Template.js',
 		],
@@ -56,7 +56,7 @@ Package.on_use(function (api) {
 			'lib/collection/Slipstream.Column.js',
 			'lib/collection/Slipstream.CollectionSetup.js',
 			'lib/collection/Slipstream.Collection.js',
-			'lib/collection/Slipstream.Method.js',
+			'lib/server/Slipstream.Method.js',
 			'lib/Slipstream.Drift.js',
 		],
 		[
