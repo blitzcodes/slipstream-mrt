@@ -24,7 +24,6 @@ Package.on_use(function (api) {
 	api.add_files(
 		[
 			'lib/_inc/prototype/string.js',
-			'lib/_inc/helpers.js',
 		],
 		[
 			'client',
