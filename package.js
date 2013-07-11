@@ -66,14 +66,11 @@ Package.on_use(function (api) {
 	);
 });
 
-/**
- * WIP, currently broken till I learn more on the subject
- */
-
 Package.on_test(function (api) {
 	api.use(
 		[
 			"underscore",
+			"underscore-string",
 			"ejson"
 		],
 		[
