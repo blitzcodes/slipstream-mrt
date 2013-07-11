@@ -15,16 +15,16 @@ Package.on_use(function (api) {
 	api.use('router', 'client');
 	api.add_files(
 		[
-			'lib/_inc/handlebars/handlebars.js',
+			'lib/_inc/handlebars.js'
 		],
 		[
-			'client',
+			'client'
 		]
 	);
 	api.add_files(
 		[
-			'lib/_inc/prototype/string.js',
-			'lib/_inc/underscore/underscore.js',
+			'lib/_inc/prototype.string.js',
+			'lib/_inc/underscore.js'
 		],
 		[
 			'client',
@@ -33,9 +33,9 @@ Package.on_use(function (api) {
 	);
 	api.add_files(
 		[
-			'lib/_inc/Slipstream.js',
-			'lib/_inc/Slipstream.error.js',
-			'lib/_inc/Slipstream.log.js',
+			'lib/core/Slipstream.js',
+			'lib/core/Slipstream.error.js',
+			'lib/core/Slipstream.log.js'
 		],
 		[
 			'client',
@@ -46,7 +46,8 @@ Package.on_use(function (api) {
 		[
 			'lib/client/Slipstream.Session.js',
 			'lib/client/Slipstream.Router.js',
-			'lib/client/Slipstream.Template.js',
+			'lib/client/Slipstream.TemplateManager.js',
+			'lib/client/Slipstream.Template.js'
 		],
 		[
 			'client'
@@ -58,7 +59,7 @@ Package.on_use(function (api) {
 			'lib/collection/Slipstream.CollectionSetup.js',
 			'lib/collection/Slipstream.Collection.js',
 			'lib/server/Slipstream.Method.js',
-			'lib/Slipstream.Drift.js',
+			'lib/Slipstream.Drift.js'
 		],
 		[
 			'client',
