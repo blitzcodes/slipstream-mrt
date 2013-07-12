@@ -34,6 +34,7 @@ Package.on_use(function (api) {
 	api.add_files(
 		[
 			'lib/core/Slipstream.js',
+			'lib/core/Slipstream.defaults.js',
 			'lib/core/Slipstream.error.js',
 			'lib/core/Slipstream.log.js'
 		],
@@ -59,6 +60,7 @@ Package.on_use(function (api) {
 			'lib/collection/Slipstream.CollectionSetup.js',
 			'lib/collection/Slipstream.Collection.js',
 			'lib/server/Slipstream.Method.js',
+			'lib/core/Slipstream.Config.js',
 			'lib/Slipstream.Drift.js'
 		],
 		[
