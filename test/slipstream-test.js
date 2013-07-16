@@ -24,11 +24,11 @@ Tinytest.add('Slipstream.Drift - create object', function (test) {
 				placeholder : 'Description'
 			})
 		},
-		// The debug options can be set for any slipsteam object you're working with:
-		debug           : {
+		// The debugging options can be set for any slipsteam object you're working with:
+		debugging           : {
 			/*
 			 This will display any initialization calls that should run only the first time an object is created.
-			 This may run in any of the supporting objects, and require their matching debug flags below to be true
+			 This may run in any of the supporting objects, and require their matching debugging flags below to be true
 			 in order to display. The exception to this is the pub/sub init messages, which only requires this flag.
 			 */
 			init       : true,
