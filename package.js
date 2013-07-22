@@ -35,7 +35,7 @@ Package.on_use(function (api) {
 		[
 			'lib/core/Slipstream.js',
 			'lib/core/Slipstream.defaults.js',
-			'lib/core/Slipstream.error.js',
+			'lib/core/Slipstream.debug.js',
 			'lib/core/Slipstream.log.js'
 		],
 		[
